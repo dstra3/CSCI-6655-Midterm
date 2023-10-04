@@ -1,0 +1,105 @@
+:root{
+    --background-color: rgb(52, 52, 52); 
+    --section-background-color: rgb(174, 174, 174);
+    --text-background-color: white;
+    --text-color: black; 
+    --border-color: black;
+    --margin: 10px;
+    --radius: 10px;
+    --padding: 25px;
+    background-color: black;
+}
+.paper{
+    background-color: var(--section-background-color);
+    padding: var(--padding);
+    margin: var(--margin);
+    border-radius: var(--radius);
+    display: grid;
+    border: solid;
+    border-color: var(--border-color);
+    color: var(--text-color);
+
+    grid-template-columns: .6fr 1.5fr;
+    grid-template-rows: .7fr 2fr;
+    grid-template-areas: 
+        "header header"
+        "paper_img paragraph ";
+}
+
+.paper_img{
+    grid-area: paper_img;
+}
+
+h2{
+
+    grid-area: header;
+    text-align: center;
+    border: solid;
+    border-color: var(--border-color);
+    background-color: var(--text-background-color);
+    border-radius: var(--radius)
+}
+
+p{
+    grid-area: paragraph;
+    text-align: left;
+    padding: var(--padding);
+    border: solid;
+    border-color: var(--border-color);
+    background-color: var(--text-background-color);
+    border-radius: var(--radius)
+}
+
+.parent{
+    background-color: var(--background-color);
+    border: solid;
+    border-color: var(--border-color);
+    border-radius: var(--radius);
+}
+
+header{
+    margin: var(--margin);
+    padding: var(--padding);
+    border: solid;
+    border-color: var(--border-color);
+    background-color: var(--section-background-color);
+    border-radius: var(--radius);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .5fr 2fr;
+    grid-template-areas: 
+        ". h1 ."
+        ". einstein_img .";
+}
+h1{
+    grid-area: h1;
+    text-align: center;
+    border: solid;
+    border-color: var(--border-color);
+    background-color: var(--text-background-color);
+    border-radius: var(--radius)
+}
+#einstein_img{
+    grid-area: einstein_img;
+    align-content: center;
+}
+img{
+    border: solid;
+    border-color: var(--border-color);
+    height: 50vh;
+    border-radius: var(--radius);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width:500px){
+    .paper{
+        grid-template-columns: 1fr;
+        grid-template-rows: .3fr .5fr 1fr;
+        grid-template-areas: 
+        "header"
+        "paper_img"
+        "paragraph";
+    }
+}
