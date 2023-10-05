@@ -20,7 +20,7 @@
     color: var(--text-color);
 
     grid-template-columns: .6fr 1.5fr;
-    grid-template-rows: .7fr 2fr;
+    grid-template-rows: .6fr 1.5fr;
     grid-template-areas: 
         "header header"
         "paper_img paragraph ";
@@ -47,7 +47,11 @@ p{
     border: solid;
     border-color: var(--border-color);
     background-color: var(--text-background-color);
-    border-radius: var(--radius)
+    border-radius: var(--radius);
+}
+
+a{
+    word-break: break-all; /*https://stackoverflow.com/questions/14477156/text-not-wrapping-in-paragraph-element*/
 }
 
 .parent{
